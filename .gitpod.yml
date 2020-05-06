@@ -4,14 +4,9 @@ ports:
 tasks:
 - name: Apache
   command: >
-    while [ ! -f /tmp/terminado ] ; do sleep 1; done ; apachectl start &&
     multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
 - name: Terminal
-  init: >
-    composer install;
-    touch /tmp/terminado
   command: >
-    clear;
     echo "";
     echo "Cosas que puedes hacer en este terminal:";
     echo " * apachectl stop";
