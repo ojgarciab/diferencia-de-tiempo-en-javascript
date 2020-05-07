@@ -6,5 +6,6 @@
 [![Ver en GitHub Pages](http://img.shields.io/badge/%F0%9F%8C%8D%20Enlace-Ver%20en%20GitHub%20Pages-blue)](https://ojgarciab.github.io/diferencia-de-tiempo-en-javascript/)
 
 Esta calculadora, en javascript plano, permite calcular la diferencia:
-  * En número de segundos.
-  * Con formato "días horas:minutos:segundos".
+
+* En número de segundos.
+* Con formato "días horas:minutos:segundos".
