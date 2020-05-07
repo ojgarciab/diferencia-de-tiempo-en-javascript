@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (evento) => {
     let calcular = document.getElementById('calcular');
     let actual = document.getElementById('actual');
     /* Agregamos la función de reinicio de valores a la hora actual cuando pulsemos el botón */
-    actual.addEventListener('click', (evento) => {
+    actual.addEventListener('click', () => {
         /* Obtenemos la fecha actual y calculamos fecha y hora */
         let ahora = new Date();
         let fecha = ahora.toISOString().substring(0, 10);
@@ -21,7 +21,25 @@ document.addEventListener('DOMContentLoaded', (evento) => {
     /* Al cargar la página realizamos un clic inicial */
     actual.click();
     /* Agregamos la función de cálculo cuando pulsemos el botón */
-    calcular.addEventListener('click', (evento) => {
-        console.log('Evento');
+    calcular.addEventListener('click', () => {
+        /* Convertimos los campos en fechas completas */
+        let ini = new Date(
+            [ ini_fecha.value, ini_hora.value ].join(' ')
+        );
+        let fin = new Date(
+            [ fin_fecha.value, fin_hora.value ].join(' ')
+        );
+        /* Calculamos la diferencia en segundos, minutos y horas */
+        let segundos = Math.abs(ini - fin) / 1000;
+        let minutos = Math.floor(segundos / 60);
+        segundos %= 60;
+        let horas = Math.floor(minutos / 60);
+        minutos %= 60;
+        let resultado = [
+            ('0' + horas).substr(-2),
+            ('0' + minutos).substr(-2),
+            ('0' + segundos).substr(-2)
+        ].join(':');
+        document.getElementById('res-hora').value = resultado;
     });
 });
