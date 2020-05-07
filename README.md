@@ -7,5 +7,5 @@
 
 Esta calculadora, en javascript plano, permite calcular la diferencia:
 
-  * En número de segundos.
-  * Con formato "días horas:minutos:segundos".
+* En número de segundos.
+* Con formato "días horas:minutos:segundos".
