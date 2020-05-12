@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (evento) => {
+document.addEventListener("DOMContentLoaded", () => {
     /* Almacenamos los elementos más usados del DOM */
     let iniFecha = document.getElementById("ini-fecha");
     let iniHora = document.getElementById("ini-hora");
